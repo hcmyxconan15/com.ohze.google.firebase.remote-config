@@ -11,14 +11,6 @@
   ],
   "unity": "2021.1",
   "author": {
-    "name": "Google LLC",
-    "email": "hungpt@sandinh.net"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HungPT-Ohze/com.ohze.google.firebase.remote-config"
-  },
-  "dependencies": {
-    "com.ohze.google.firebase.app": "12.8.0"
+    "name": "Google LLC"
   }
 }
