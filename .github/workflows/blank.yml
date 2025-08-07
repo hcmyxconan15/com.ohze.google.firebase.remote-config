@@ -42,6 +42,10 @@ jobs:
             exit 0
           fi
 
+      - name: Temporarily move .github out to allow subtree split
+        run: |
+          mv .github ../temp_github || true
+
       - name: Deploy UPM package
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
@@ -49,7 +53,7 @@ jobs:
           set -ex
 
           SEMVER="$VERSION"
-          PREFIX=$(dirname "$MATCH_FILE" | sed 's|^\./||')
+          PREFIX="."  # vì package.json nằm ở thư mục gốc
           BRANCH="upm"
 
           # Tách subtree và tạo nhánh
@@ -66,3 +70,7 @@ jobs:
 
           # Xoá nhánh tạm
           git branch -D "$BRANCH"
+
+      - name: Restore .github folder
+        run: |
+          mv ../temp_github .github || true
