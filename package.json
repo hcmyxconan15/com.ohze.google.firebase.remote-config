@@ -1,6 +1,6 @@
 {
-  "name": "com.undercat.firebase.remote-config",
-  "version": "12.8.1",
+  "name": "com.undercats.firebase.remote-config",
+  "version": "12.8.2",
   "displayName": "Firebase Remote Config",
   "description": "Firebase Remote Config is a cloud service that lets you change the behavior and appearance of your client app or server without requiring users to download an app update. When using Remote Config, you create in-app default values that control the behavior and appearance of your application.",
   "keywords": [
